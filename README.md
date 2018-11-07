@@ -36,6 +36,16 @@ A read-only array reference.
 
 A read-only hash reference.
 
+# KNOWN ISSUES
+
+Parameterized types, e.g. `ConstArrayRef[Int]` are not yet supported.
+
+# SEE ALSO
+
+[Const::Fast](https://metacpan.org/pod/Const::Fast)
+
+[Type::Tiny](https://metacpan.org/pod/Type::Tiny)
+
 # SOURCE
 
 The development version is on github at [https://github.com/robrwo/Types-Const](https://github.com/robrwo/Types-Const)

@@ -68,3 +68,15 @@ coerce ConstHashRef,
   via { Const::Fast::_make_readonly( $_ => 0 ); return $_; };
 
 1;
+
+=head1 KNOWN ISSUES
+
+Parameterized types, e.g. C<ConstArrayRef[Int]> are not yet supported.
+
+=head1 SEE ALSO
+
+L<Const::Fast>
+
+L<Type::Tiny>
+
+=cut
