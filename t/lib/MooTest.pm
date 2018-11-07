@@ -9,13 +9,13 @@ use namespace::autoclean;
 
 has foo => (
     is      => 'ro',
-    isa     => ArrayRef,
+    isa     => ArrayRef[Int],
     default => sub { [1] },
 );
 
 has bar => (
     is      => 'ro',
-    isa     => ConstArrayRef,
+    isa     => ConstArrayRef[Int],
     coerce  => 1,
     default => sub { [1] },
 );
