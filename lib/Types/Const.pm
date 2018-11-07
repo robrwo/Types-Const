@@ -1,5 +1,10 @@
 package Types::Const;
 
+use v5.8;
+
+use strict;
+use warnings;
+
 # ABSTRACT: Types that coerce references to read-only
 
 use Type::Library
@@ -37,7 +42,7 @@ A read-only array reference.
 
 =cut
 
-declare ConstArrayRef,
+declare "ConstArrayRef",
   as ArrayRef,
   where   { Internals::SvREADONLY(@$_) },
   message {
@@ -45,7 +50,7 @@ declare ConstArrayRef,
     return "$_ is not readonly";
   };
 
-coerce ConstArrayRef,
+coerce "ConstArrayRef",
   from ArrayRef,
   via { Const::Fast::_make_readonly( $_ => 0 ); return $_; };
 
@@ -55,7 +60,7 @@ A read-only hash reference.
 
 =cut
 
-declare ConstHashRef,
+declare "ConstHashRef",
   as HashRef,
   where   { Internals::SvREADONLY(%$_) },
   message {
@@ -63,7 +68,7 @@ declare ConstHashRef,
     return "$_ is not readonly";
   };
 
-coerce ConstHashRef,
+coerce "ConstHashRef",
   from HashRef,
   via { Const::Fast::_make_readonly( $_ => 0 ); return $_; };
 

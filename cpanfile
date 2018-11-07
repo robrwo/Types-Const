@@ -4,6 +4,7 @@ requires "Type::Library" => "0";
 requires "Type::Tiny" => "0";
 requires "Type::Utils" => "0";
 requires "Types::Standard" => "0";
+requires "perl" => "v5.8.0";
 
 on 'test' => sub {
   requires "File::Spec" => "0";
