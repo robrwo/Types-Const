@@ -4,6 +4,9 @@ Revision history for {{ $dist->name }}:
   [Other]
   - Removed unnecessary prerequisite.
 
+  - Added recommended prerequisite for Type::Tiny::XS and
+    Ref::Util::XS.
+
   [Tests]
   - Fixed minimum prerequisite for Moo.
 

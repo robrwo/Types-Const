@@ -16,6 +16,9 @@ use Type::Tiny;
 use Type::Utils -all;
 use Types::Standard -types;
 
+# RECOMMEND PREREQ: Ref::Util::XS
+# RECOMMEND PREREQ: Type::Tiny::XS
+
 our $VERSION = 'v0.1.1';
 
 =head1 SYNOPSIS
