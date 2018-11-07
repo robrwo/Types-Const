@@ -1,5 +1,4 @@
 requires "Const::Fast" => "0";
-requires "List::AllUtils" => "0.10";
 requires "Type::Library" => "0";
 requires "Type::Tiny" => "0";
 requires "Type::Utils" => "0";

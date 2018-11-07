@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Other]
+  - Removed unnecessary prerequisite.
 
 v0.1.0    2018-11-07 07:31:02+00:00 Europe/London
   - Initial version released.
