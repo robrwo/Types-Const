@@ -3,6 +3,7 @@ requires "Type::Library" => "0";
 requires "Type::Tiny" => "0";
 requires "Type::Utils" => "0";
 requires "Types::Standard" => "0";
+requires "namespace::autoclean" => "0.28";
 requires "perl" => "v5.8.0";
 recommends "Ref::Util::XS" => "0";
 recommends "Type::Tiny::XS" => "0";
@@ -14,7 +15,6 @@ on 'test' => sub {
   requires "Test::More" => "0";
   requires "Test::Most" => "0";
   requires "lib" => "0";
-  requires "namespace::autoclean" => "0";
 };
 
 on 'test' => sub {
@@ -27,6 +27,7 @@ on 'configure' => sub {
 
 on 'develop' => sub {
   requires "Pod::Coverage::TrustPod" => "0";
+  requires "Test::CleanNamespaces" => "0.15";
   requires "Test::EOF" => "0";
   requires "Test::EOL" => "0";
   requires "Test::Kwalitee" => "1.21";

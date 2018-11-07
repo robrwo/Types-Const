@@ -19,6 +19,8 @@ use Types::Standard -types;
 # RECOMMEND PREREQ: Ref::Util::XS
 # RECOMMEND PREREQ: Type::Tiny::XS
 
+use namespace::autoclean 0.28;
+
 our $VERSION = 'v0.1.1';
 
 =head1 SYNOPSIS
