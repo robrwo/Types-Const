@@ -1,6 +1,6 @@
 package MooTest;
 
-use Moo;
+use Moo '1.006000';
 
 use Types::Const -types;
 use Types::Standard -types;
