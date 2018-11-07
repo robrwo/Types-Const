@@ -16,7 +16,7 @@ use Type::Tiny;
 use Type::Utils -all;
 use Types::Standard -types;
 
-our $VERSION = 'v0.1.0';
+our $VERSION = 'v0.1.1';
 
 =head1 SYNOPSIS
 
