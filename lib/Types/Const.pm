@@ -28,6 +28,7 @@ our $VERSION = 'v0.2.0';
 
 =head1 SYNOPSIS
 
+  use Moo;
   use Types::Const -types;
   use Types::Standard -types;
 
@@ -35,16 +36,16 @@ our $VERSION = 'v0.2.0';
 
   has bar => (
     is      => 'ro',
-    isa     => ConstArrayRef,
+    isa     => ConstArrayRef[Str],
     coerce  => 1,
   );
 
 =head1 DESCRIPTION
 
-The type library provides types that allow read-only attributes to be
-read-only.
+The type library provides types that force read-only hash and array
+reference attributes to be deeply read-only.
 
-=type C<ConstArrayRef>
+=type C<ConstArrayRef[`a]>
 
 A read-only array reference.
 
@@ -64,7 +65,7 @@ coerce ConstArrayRef,
   from ArrayRef,
   via \&__coerce_constant;
 
-=type C<ConstHashRef>
+=type C<ConstHashRef[`a]>
 
 A read-only hash reference.
 
@@ -172,5 +173,7 @@ __PACKAGE__->meta->make_immutable;
 L<Const::Fast>
 
 L<Type::Tiny>
+
+L<Types::Standard>
 
 =cut

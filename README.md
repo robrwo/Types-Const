@@ -9,6 +9,7 @@ version v0.2.0
 # SYNOPSIS
 
 ```perl
+use Moo;
 use Types::Const -types;
 use Types::Standard -types;
 
@@ -16,35 +17,33 @@ use Types::Standard -types;
 
 has bar => (
   is      => 'ro',
-  isa     => ConstArrayRef,
+  isa     => ConstArrayRef[Str],
   coerce  => 1,
 );
 ```
 
 # DESCRIPTION
 
-The type library provides types that allow read-only attributes to be
-read-only.
+The type library provides types that force read-only hash and array
+reference attributes to be deeply read-only.
 
 # TYPES
 
-## `ConstArrayRef`
+## `` ConstArrayRef[`a] ``
 
 A read-only array reference.
 
-## `ConstHashRef`
+## `` ConstHashRef[`a] ``
 
 A read-only hash reference.
-
-# KNOWN ISSUES
-
-Parameterized types, e.g. `ConstArrayRef[Int]` are not yet supported.
 
 # SEE ALSO
 
 [Const::Fast](https://metacpan.org/pod/Const::Fast)
 
 [Type::Tiny](https://metacpan.org/pod/Type::Tiny)
+
+[Types::Standard](https://metacpan.org/pod/Types::Standard)
 
 # SOURCE
 
