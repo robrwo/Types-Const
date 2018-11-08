@@ -165,7 +165,7 @@ sub __coercion_generator {
     return $coercion;
 }
 
-1;
+__PACKAGE__->meta->make_immutable;
 
 =head1 SEE ALSO
 
