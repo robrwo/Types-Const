@@ -21,3 +21,6 @@ Types-Const-v*/*
 
 cpanfile.snapshot
 local/
+
+perltidy.LOG
+perltidy.ERR
