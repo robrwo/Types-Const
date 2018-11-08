@@ -103,3 +103,4 @@ Types-Const-.*/
 Types-Const-.*\.tar\.gz
 \.mailmap$
 cpanfile\.snapshot$
+local/
