@@ -14,7 +14,7 @@ use Type::Library
 use Const::Fast ();
 use List::Util 1.33 ();
 use Type::Coercion;
-use Type::Tiny;
+use Type::Tiny 1.002001;
 use Type::Utils -all;
 use Types::Standard qw/ -types is_ArrayRef is_HashRef is_Ref /;
 use Types::TypeTiny ();
