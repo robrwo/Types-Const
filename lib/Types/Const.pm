@@ -9,7 +9,7 @@ use warnings;
 
 use Type::Library
    -base,
-   -declare => qw/ ConstArrayRef /;
+   -declare => qw/ ConstArrayRef ConstHashRef /;
 
 use Const::Fast ();
 use Type::Tiny;

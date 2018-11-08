@@ -1,6 +1,9 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Bug Fixes]
+  - Declare ConstHashRef type.
+
   [Other]
   - Updated module metadata.
 
