@@ -1,6 +1,12 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Add the generic Const type, #2.
+
+  [Incompatabilities]
+  - The ConstArrayRef and ConstHashRef types are no longer provided.
+
   [Tests]
   - Corrected test descriptions.
 

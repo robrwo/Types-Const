@@ -9,7 +9,7 @@ use warnings;
 
 use Type::Library
    -base,
-   -declare => qw/ ConstArrayRef ConstHashRef /;
+   -declare => qw/ Const /;
 
 use Const::Fast ();
 use List::Util 1.33 ();
@@ -24,7 +24,7 @@ use Types::TypeTiny ();
 
 use namespace::autoclean 0.28;
 
-our $VERSION = 'v0.2.3';
+our $VERSION = 'v0.3.0';
 
 =head1 SYNOPSIS
 
@@ -48,83 +48,37 @@ read-only hash and array reference attributes to be deeply read-only.
 See the L<known issues|/KNOWN_ISSUES> below for a discussion of
 side-effects.
 
-=type C<ConstArrayRef[`a]>
+=type C<Const[`a]>
 
-A read-only array reference.
+Any defined reference value that is read-only.
 
-=cut
+If parameterized, then the referred value must also pass the type
+constraint, for example C<Const[HashRef[Int]]> must a a hash reference
+with integer values.
 
-declare ConstArrayRef,
-  as ArrayRef,
-  where   \&__is_readonly,
-  message {
-    return ArrayRef->get_message($_) unless ArrayRef->check($_);
-    return "$_ is not readonly";
-  },
-  constraint_generator => \&__arrayref_constraint_generator,
-  coercion_generator   => \&__coercion_generator;
+It supports coercions to read-only.
 
-coerce ConstArrayRef,
-  from ArrayRef,
-  via \&__coerce_constant;
-
-=type C<ConstHashRef[`a]>
-
-A read-only hash reference.
+This was added in v0.3.0.
 
 =cut
 
-declare ConstHashRef,
-  as HashRef,
+declare Const,
+  as Ref,
   where   \&__is_readonly,
   message {
-    return HashRef->get_message($_) unless HashRef->check($_);
     return "$_ is not readonly";
   },
-  constraint_generator => \&__hashref_constraint_generator,
+  constraint_generator => \&__constraint_generator,
   coercion_generator   => \&__coercion_generator;
 
-coerce ConstHashRef,
-  from HashRef,
+coerce Const,
+  from Ref,
   via \&__coerce_constant;
 
 sub __coerce_constant {
     my $value = @_ ? $_[0] : $_;
     Const::Fast::_make_readonly( $value => 0 );
     return $value;
-}
-
-sub __arrayref_constraint_generator {
-    return ConstArrayRef unless @_;
-
-    my $param = shift;
-    Types::TypeTiny::TypeTiny->check($param)
-        or _croak("Parameter to ConstArrayRef[`a] expected to be a type constraint; got $param");
-
-    _croak("Only one parameter to ConstArrayRef[`a] expected; got @{[ 1 + @_ ]}.")
-        if @_;
-
-    my $psub = ArrayRef->parameterize($param)->constraint;
-
-    return sub {
-        return $psub->($_) && __is_readonly($_);
-    };
-
-}
-
-sub __hashref_constraint_generator {
-    return ConstHashRef unless @_;
-
-    my $param = shift;
-    Types::TypeTiny::TypeTiny->check($param)
-        or _croak("Parameter to ConstHashRef[`a] expected to be a type constraint; got $param");
-
-    my $psub = HashRef->parameterize($param)->constraint;
-
-    return sub {
-        return $psub->($_) && __is_readonly($_);
-    };
-
 }
 
 sub __is_readonly {
@@ -143,6 +97,23 @@ sub __is_readonly {
     else {
         return Internals::SvREADONLY($_);
     }
+}
+
+sub __constraint_generator {
+    return Const unless @_;
+
+    my $param = shift;
+    Types::TypeTiny::TypeTiny->check($param)
+        or _croak("Parameter to Const[`a] expected to be a type constraint; got $param");
+
+    _croak("Only one parameter to Const[`a] expected; got @{[ 1 + @_ ]}.")
+        if @_;
+
+    my $psub = $param->constraint;
+
+    return sub {
+        return $psub->($_) && __is_readonly($_);
+    };
 }
 
 sub __coercion_generator {

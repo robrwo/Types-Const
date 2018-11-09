@@ -15,7 +15,7 @@ has foo => (
 
 has bar => (
     is      => 'ro',
-    isa     => ConstArrayRef[Int],
+    isa     => Const[ArrayRef[Int]],
     coerce  => 1,
     default => sub { [1] },
 );
