@@ -45,12 +45,7 @@ A read-only hash reference.
 
 [Types::Standard](https://metacpan.org/pod/Types::Standard)
 
-# SOURCE
-
-The development version is on github at [https://github.com/robrwo/Types-Const](https://github.com/robrwo/Types-Const)
-and may be cloned from [git://github.com/robrwo/Types-Const.git](git://github.com/robrwo/Types-Const.git)
-
-# BUGS
+# KNOWN ISSUES
 
 Please report any bugs or feature requests on the bugtracker website
 [https://github.com/robrwo/Types-Const/issues](https://github.com/robrwo/Types-Const/issues)
@@ -58,6 +53,11 @@ Please report any bugs or feature requests on the bugtracker website
 When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired
 feature.
+
+# SOURCE
+
+The development version is on github at [https://github.com/robrwo/Types-Const](https://github.com/robrwo/Types-Const)
+and may be cloned from [git://github.com/robrwo/Types-Const.git](git://github.com/robrwo/Types-Const.git)
 
 # AUTHOR
 

@@ -168,6 +168,8 @@ sub __coercion_generator {
 
 __PACKAGE__->meta->make_immutable;
 
+=head1 prepend:KNOWN ISSUES
+
 =head1 SEE ALSO
 
 L<Const::Fast>
