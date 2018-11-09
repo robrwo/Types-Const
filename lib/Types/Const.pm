@@ -122,7 +122,7 @@ sub __hashref_constraint_generator {
     my $psub = HashRef->parameterize($param)->constraint;
 
     return sub {
-        return psub->($_) && __is_readonly($_);
+        return $psub->($_) && __is_readonly($_);
     };
 
 }

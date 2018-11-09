@@ -1,12 +1,18 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Bug Fixes]
+  - Fix paramertized ConstHashRef, #1.
+
   [Documentation]
   - Mention that this is experimental, #3.
 
   - Document issue with hash references, #4.
 
   - Combined KNOWN ISSUES with BUGS section.
+
+  [Tests]
+  - Add more tests.
 
   [Other]
   - Remove perltidy files that were accidentally included in
