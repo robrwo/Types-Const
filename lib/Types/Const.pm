@@ -19,7 +19,7 @@ use Type::Utils -all;
 use Types::Standard qw/ -types is_ArrayRef is_HashRef is_Ref /;
 use Types::TypeTiny ();
 
-# RECOMMEND PREREQ: Ref::Util::XS
+# RECOMMEND PREREQ: Ref::Util::XS 0.100
 # RECOMMEND PREREQ: Type::Tiny::XS
 
 use namespace::autoclean 0.28;

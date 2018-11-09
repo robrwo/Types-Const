@@ -9,6 +9,9 @@ Revision history for {{ $dist->name }}:
 
   - Updated development tests.
 
+  [Other]
+  - Added minimum version for recommended Ref::Util::XS.
+
 v0.3.1    2018-11-09 18:48:21+00:00 Europe/London
   [Documentation]
   - Updated SYNOPSIS.
