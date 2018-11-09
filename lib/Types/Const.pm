@@ -36,7 +36,7 @@ our $VERSION = 'v0.3.1';
 
   has bar => (
     is      => 'ro',
-    isa     => ConstArrayRef[Str],
+    isa     => Const[ArrayRef[Str]],
     coerce  => 1,
   );
 

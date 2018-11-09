@@ -4,7 +4,7 @@ Types::Const - Types that coerce references to read-only
 
 # VERSION
 
-version v0.3.0
+version v0.3.1
 
 # SYNOPSIS
 
@@ -17,7 +17,7 @@ use Types::Standard -types;
 
 has bar => (
   is      => 'ro',
-  isa     => ConstArrayRef[Str],
+  isa     => Const[ArrayRef[Str]],
   coerce  => 1,
 );
 ```
