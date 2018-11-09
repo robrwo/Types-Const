@@ -4,6 +4,10 @@ Revision history for {{ $dist->name }}:
   [Documentation]
   - Combined KNOWN ISSUES with BUGS section.
 
+  [Other]
+  - Remove perltidy files that were accidentally included in
+    distribution.
+
 v0.2.1    2018-11-08 21:49:49+00:00 Europe/London
   [Bug Fixes]
   - Set required minimum version of Type::Tiny.
