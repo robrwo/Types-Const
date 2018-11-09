@@ -6,24 +6,17 @@ use Const::Fast;
 use Types::Const -types;
 use Types::Standard -types;
 
-subtest 'parameterize empty ConstArrayRef' => sub {
+subtest 'parameterize empty Const' => sub {
 
-    ok my $type = ConstArrayRef [], 'parameterize';
-    is $type->display_name => ConstArrayRef->display_name, 'display_name'
-
-};
-
-subtest 'parameterize empty ConstHashRef' => sub {
-
-    ok my $type = ConstHashRef [], 'parameterize';
-    is $type->display_name => ConstHashRef->display_name, 'display_name'
+    ok my $type = Const [], 'parameterize';
+    is $type->display_name => Const->display_name, 'display_name'
 
 };
 
-subtest 'parameterize Int on ConstArrayRef' => sub {
+subtest 'parameterize ArrayRef[Int] on Const' => sub {
 
-    ok my $type = ConstArrayRef [Int], 'parameterize';
-    is $type->display_name => "ConstArrayRef[Int]", 'display_name';
+    ok my $type = Const[ArrayRef[Int]], 'parameterize';
+    is $type->display_name => "Const[ArrayRef[Int]]", 'display_name';
 
     const my @empty => ();
     const my @ints  => ( 1 .. 3 );
@@ -50,10 +43,11 @@ subtest 'parameterize Int on ConstArrayRef' => sub {
 
 };
 
-subtest 'parameterize Int on ConstHashRef' => sub {
 
-    ok my $type = ConstHashRef [Int], 'parameterize';
-    is $type->display_name => "ConstHashRef[Int]", 'display_name';
+subtest 'parameterize HashRef[Int] on Const' => sub {
+
+    ok my $type = Const[HashRef [Int]], 'parameterize';
+    is $type->display_name => "Const[HashRef[Int]]", 'display_name';
 
     const my %empty => ();
     const my %ints  => ( A => 1, B => 2, C => 3 );

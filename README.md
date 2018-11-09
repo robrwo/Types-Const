@@ -4,7 +4,7 @@ Types::Const - Types that coerce references to read-only
 
 # VERSION
 
-version v0.2.2
+version v0.3.0
 
 # SYNOPSIS
 
@@ -32,13 +32,17 @@ side-effects.
 
 # TYPES
 
-## `` ConstArrayRef[`a] ``
+## `` Const[`a] ``
 
-A read-only array reference.
+Any defined reference value that is read-only.
 
-## `` ConstHashRef[`a] ``
+If parameterized, then the referred value must also pass the type
+constraint, for example `Const[HashRef[Int]]` must a a hash reference
+with integer values.
 
-A read-only hash reference.
+It supports coercions to read-only.
+
+This was added in v0.3.0.
 
 # SEE ALSO
 
