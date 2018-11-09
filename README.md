@@ -24,8 +24,11 @@ has bar => (
 
 # DESCRIPTION
 
-The type library provides types that force read-only hash and array
-reference attributes to be deeply read-only.
+This is an _experimental_ type library that provides types that force
+read-only hash and array reference attributes to be deeply read-only.
+
+See the [known issues](#known_issues) below for a discussion of
+side-effects.
 
 # TYPES
 
@@ -46,6 +49,19 @@ A read-only hash reference.
 [Types::Standard](https://metacpan.org/pod/Types::Standard)
 
 # KNOWN ISSUES
+
+## Side-effects of read-only data structures
+
+A side-effect of read-only data structures is that an exception will
+be thrown if you attempt to fetch the value of a non-existent key:
+
+```
+Attempt to access disallowed key 'foo' in a restricted hash
+```
+
+The work around for this is to check that a key exists beforehand.
+
+## Bug reports and feature requests
 
 Please report any bugs or feature requests on the bugtracker website
 [https://github.com/robrwo/Types-Const/issues](https://github.com/robrwo/Types-Const/issues)
