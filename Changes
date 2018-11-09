@@ -4,6 +4,8 @@ Revision history for {{ $dist->name }}:
   [Documentation]
   - Mention that this is experimental, #3.
 
+  - Document issue with hash references, #4.
+
   - Combined KNOWN ISSUES with BUGS section.
 
   [Other]

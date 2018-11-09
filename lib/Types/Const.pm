@@ -45,6 +45,9 @@ our $VERSION = 'v0.2.2';
 This is an I<experimental> type library that provides types that force
 read-only hash and array reference attributes to be deeply read-only.
 
+See the L<known issues|/KNOWN_ISSUES> below for a discussion of
+side-effects.
+
 =type C<ConstArrayRef[`a]>
 
 A read-only array reference.
@@ -169,6 +172,17 @@ sub __coercion_generator {
 __PACKAGE__->meta->make_immutable;
 
 =head1 prepend:KNOWN ISSUES
+
+=head2 Side-effects of read-only data structures
+
+A side-effect of read-only data structures is that an exception will
+be thrown if you attempt to fetch the value of a non-existent key:
+
+    Attempt to access disallowed key 'foo' in a restricted hash
+
+The work around for this is to check that a key exists beforehand.
+
+=head2 Bug reports and feature requests
 
 =head1 SEE ALSO
 
