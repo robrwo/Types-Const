@@ -7,6 +7,8 @@ Revision history for {{ $dist->name }}:
   [Toolchain]
   - Added diagnostics for cpantesters.
 
+  - Updated development tests.
+
 v0.3.1    2018-11-09 18:48:21+00:00 Europe/London
   [Documentation]
   - Updated SYNOPSIS.
