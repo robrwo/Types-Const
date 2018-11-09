@@ -6,21 +6,21 @@ use Const::Fast;
 use Types::Const -types;
 use Types::Standard -types;
 
-subtest 'parameterize empty ArrayRef' => sub {
+subtest 'parameterize empty ConstArrayRef' => sub {
 
     ok my $type = ConstArrayRef [], 'parameterize';
     is $type->display_name => ConstArrayRef->display_name, 'display_name'
 
 };
 
-subtest 'parameterize empty HashRef' => sub {
+subtest 'parameterize empty ConstHashRef' => sub {
 
     ok my $type = ConstHashRef [], 'parameterize';
     is $type->display_name => ConstHashRef->display_name, 'display_name'
 
 };
 
-subtest 'parameterize Int on ArrayRef' => sub {
+subtest 'parameterize Int on ConstArrayRef' => sub {
 
     ok my $type = ConstArrayRef [Int], 'parameterize';
     is $type->display_name => "ConstArrayRef[Int]", 'display_name';
@@ -50,7 +50,7 @@ subtest 'parameterize Int on ArrayRef' => sub {
 
 };
 
-subtest 'parameterize Int on HashRef' => sub {
+subtest 'parameterize Int on ConstHashRef' => sub {
 
     ok my $type = ConstHashRef [Int], 'parameterize';
     is $type->display_name => "ConstHashRef[Int]", 'display_name';
