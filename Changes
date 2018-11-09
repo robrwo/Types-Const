@@ -14,6 +14,8 @@ Revision history for {{ $dist->name }}:
   [Tests]
   - Add more tests.
 
+  - Removed Pod::LinkCheck test, since it is buggy.
+
   [Other]
   - Remove perltidy files that were accidentally included in
     distribution.
