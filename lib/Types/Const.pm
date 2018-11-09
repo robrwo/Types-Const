@@ -42,8 +42,8 @@ our $VERSION = 'v0.2.2';
 
 =head1 DESCRIPTION
 
-The type library provides types that force read-only hash and array
-reference attributes to be deeply read-only.
+This is an I<experimental> type library that provides types that force
+read-only hash and array reference attributes to be deeply read-only.
 
 =type C<ConstArrayRef[`a]>
 
