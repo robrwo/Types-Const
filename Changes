@@ -4,6 +4,9 @@ Revision history for {{ $dist->name }}:
   [Documentation]
   - Added section on performance issues.
 
+  [Toolchain]
+  - Added diagnostics for cpantesters.
+
 v0.3.1    2018-11-09 18:48:21+00:00 Europe/London
   [Documentation]
   - Updated SYNOPSIS.
