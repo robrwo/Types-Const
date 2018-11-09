@@ -153,6 +153,21 @@ be thrown if you attempt to fetch the value of a non-existent key:
 
 The work around for this is to check that a key exists beforehand.
 
+=head2 Performance issues
+
+Validating that a complex data-structure is read-only can affect
+performance.  If this is an issue, one workaround is to use
+L<Devel::StrictMode> and only validate data structures during tests:
+
+  has bar => (
+    is      => 'ro',
+    isa     => STRICT ? Const[ArrayRef[Str]] : ArrayRef,
+    coerce  => 1,
+  );
+
+Another means of improving performance is to only check the type
+once. (Since it is read-only, there is no need to re-check it.)
+
 =head2 Bug reports and feature requests
 
 =head1 SEE ALSO

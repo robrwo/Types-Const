@@ -65,6 +65,23 @@ Attempt to access disallowed key 'foo' in a restricted hash
 
 The work around for this is to check that a key exists beforehand.
 
+## Performance issues
+
+Validating that a complex data-structure is read-only can affect
+performance.  If this is an issue, one workaround is to use
+[Devel::StrictMode](https://metacpan.org/pod/Devel::StrictMode) and only validate data structures during tests:
+
+```perl
+has bar => (
+  is      => 'ro',
+  isa     => STRICT ? Const[ArrayRef[Str]] : ArrayRef,
+  coerce  => 1,
+);
+```
+
+Another means of improving performance is to only check the type
+once. (Since it is read-only, there is no need to re-check it.)
+
 ## Bug reports and feature requests
 
 Please report any bugs or feature requests on the bugtracker website
