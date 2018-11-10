@@ -1,6 +1,9 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Bug Fix]
+  - Uses version modeule for older Perls than cannot handle tuple
+    versions.
 
 v0.3.2    2018-11-10 02:26:35+00:00 Europe/London
   [Big Fix]
