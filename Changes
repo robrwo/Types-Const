@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+
+v0.3.2    2018-11-10 02:26:35+00:00 Europe/London
   [Big Fix]
   - Fix checks for read-only RegexpRefs.
 
