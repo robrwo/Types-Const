@@ -5,8 +5,11 @@ Revision history for {{ $dist->name }}:
   - Uses version modeule for older Perls than cannot handle tuple
     versions.
 
+  [Documentation]
+  - Fixed typo in Changes.
+
 v0.3.2    2018-11-10 02:26:35+00:00 Europe/London
-  [Big Fix]
+  [Bug Fix]
   - Fix checks for read-only RegexpRefs.
 
   [Documentation]
