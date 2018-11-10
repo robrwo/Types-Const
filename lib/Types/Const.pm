@@ -16,7 +16,7 @@ use List::Util 1.33 ();
 use Type::Coercion;
 use Type::Tiny 1.002001;
 use Type::Utils -all;
-use Types::Standard qw/ -types is_ArrayRef is_HashRef is_Ref /;
+use Types::Standard qw/ -types is_ArrayRef is_HashRef is_ScalarRef /;
 use Types::TypeTiny ();
 
 # RECOMMEND PREREQ: Ref::Util::XS 0.100
@@ -82,21 +82,20 @@ sub __coerce_constant {
 }
 
 sub __is_readonly {
-    if ( is_ArrayRef($_) ) {
-        return Internals::SvREADONLY(@$_)
-          && List::Util::all { __is_readonly($_) } @$_;
+    if ( is_ArrayRef( $_[0] ) ) {
+        return Internals::SvREADONLY( @{ $_[0] } )
+          && List::Util::all { __is_readonly($_) } @{ $_[0] };
     }
-    elsif ( is_HashRef($_) ) {
-        &Internals::hv_clear_placeholders($_);
-        return Internals::SvREADONLY(%$_)
-          && List::Util::all { __is_readonly($_) } values %$_;
+    elsif ( is_HashRef( $_[0] ) ) {
+        &Internals::hv_clear_placeholders( $_[0] );
+        return Internals::SvREADONLY( %{ $_[0] } )
+          && List::Util::all { __is_readonly($_) } values %{ $_[0] };
     }
-    elsif ( is_Ref($_) ) {
-        return Internals::SvREADONLY($$_);
+    elsif ( is_ScalarRef( $_[0] )  ) {
+        return Internals::SvREADONLY( ${ $_[0] } );
     }
-    else {
-        return Internals::SvREADONLY($_);
-    }
+
+    return Internals::SvREADONLY( $_[0] );
 }
 
 sub __constraint_generator {

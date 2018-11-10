@@ -3,7 +3,7 @@
 use Test::Most;
 
 use Const::Fast;
-use Types::Const -types;
+use Types::Const v0.3.2 -types;
 use Types::Standard -types;
 
 subtest 'Const' => sub {
@@ -17,6 +17,9 @@ subtest 'Const' => sub {
     ok !$type->check( \$x ), 'check fails (not readonly)';
     ok $type->check( \ 1 ), 'check (ref to const)';
     ok $type->check( \ 'string' ), 'check (ref to const)';
+
+    const my $re => qr/x/;
+    ok $type->check( $re ), 'check (regex)';
 
     const my @ro => qw/ a b c /;
     ok $type->check( \@ro ), 'check';
