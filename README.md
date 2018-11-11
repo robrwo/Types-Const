@@ -44,6 +44,11 @@ It supports coercions to read-only.
 
 This was added in v0.3.0.
 
+# ROADMAP
+
+Support for Perl versions earlier than 5.10 will be removed sometime
+in 2019.
+
 # SEE ALSO
 
 [Const::Fast](https://metacpan.org/pod/Const::Fast)

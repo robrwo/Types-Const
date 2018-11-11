@@ -179,6 +179,11 @@ once. (Since it is read-only, there is no need to re-check it.)
 
 =head2 Bug reports and feature requests
 
+=head1 ROADMAP
+
+Support for Perl versions earlier than 5.10 will be removed sometime
+in 2019.
+
 =head1 SEE ALSO
 
 L<Const::Fast>
