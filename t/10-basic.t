@@ -31,7 +31,7 @@ subtest 'Const' => sub {
     const my $re => qr/x/;
   TODO: {
       local $TODO = "Test::TypeTiny::should_pass";
-      should_pass($re, $type); # RT
+      should_pass($re, $type); # RT 127635
     }
     ok !!$type->check( $re ), 'Reference qr/x/ passes type constraint Const';
 
