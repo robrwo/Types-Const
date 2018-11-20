@@ -177,6 +177,11 @@ L<Devel::StrictMode> and only validate data structures during tests:
 Another means of improving performance is to only check the type
 once. (Since it is read-only, there is no need to re-check it.)
 
+=head2 RegexpRefs
+
+There may be an issue with regexp references. See
+L<RT#127635|https://rt.cpan.org/Ticket/Display.html?id=127635>.
+
 =head2 Bug reports and feature requests
 
 =head1 ROADMAP

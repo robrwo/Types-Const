@@ -87,6 +87,11 @@ has bar => (
 Another means of improving performance is to only check the type
 once. (Since it is read-only, there is no need to re-check it.)
 
+## RegexpRefs
+
+There may be an issue with regexp references. See
+[RT#127635](https://rt.cpan.org/Ticket/Display.html?id=127635).
+
 ## Bug reports and feature requests
 
 Please report any bugs or feature requests on the bugtracker website
