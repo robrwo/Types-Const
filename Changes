@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+
+v0.3.5    2018-11-20 19:05:10+00:00 Europe/London
   [Documentation]
   - Added a note about possible issues with RegexpRefs, RT#127635.
 
