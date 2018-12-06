@@ -25,7 +25,7 @@ use Types::TypeTiny ();
 
 use namespace::autoclean 0.28;
 
-our $VERSION = 'v0.3.6';
+our $VERSION = 'v0.3.7';
 
 =for Pod::Coverage VERSION
 
