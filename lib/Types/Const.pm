@@ -56,7 +56,7 @@ sub VERSION { # for older Perls
 This is an I<experimental> type library that provides types that force
 read-only hash and array reference attributes to be deeply read-only.
 
-See the L<known issues|/KNOWN_ISSUES> below for a discussion of
+See the L<known issues|/"KNOWN ISSUES"> below for a discussion of
 side-effects.
 
 =type C<Const[`a]>
