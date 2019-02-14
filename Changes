@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Documentation]
+  - Fix broken link in POD (Mohammad S Anwar).
 
 v0.3.6    2018-12-06 17:51:23+00:00 Europe/London
   [Bug Fixes]
