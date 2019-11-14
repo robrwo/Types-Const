@@ -57,6 +57,8 @@ in 2019.
 
 [Types::Standard](https://metacpan.org/pod/Types::Standard)
 
+[Types::ReadOnly](https://metacpan.org/pod/Types::ReadOnly)
+
 # KNOWN ISSUES
 
 ## Side-effects of read-only data structures

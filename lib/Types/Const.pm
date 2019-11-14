@@ -198,4 +198,6 @@ L<Type::Tiny>
 
 L<Types::Standard>
 
+L<Types::ReadOnly>
+
 =cut

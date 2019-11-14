@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Documentation]
+  - Add Types::ReadOnly to SEE ALSO.
 
 v0.3.7    2019-02-14 13:09:39+00:00 Europe/London
   [Documentation]
