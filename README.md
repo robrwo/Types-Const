@@ -4,7 +4,7 @@ Types::Const - Types that coerce references to read-only
 
 # VERSION
 
-version v0.3.8
+version v0.4.0
 
 # SYNOPSIS
 
@@ -43,11 +43,6 @@ with integer values.
 It supports coercions to read-only.
 
 This was added in v0.3.0.
-
-# ROADMAP
-
-Support for Perl versions earlier than 5.10 will be removed sometime
-in 2019.
 
 # SEE ALSO
 

@@ -1,6 +1,6 @@
 package Types::Const;
 
-use v5.8;
+use v5.10;
 
 use strict;
 use warnings;
@@ -25,17 +25,7 @@ use Types::TypeTiny ();
 
 use namespace::autoclean 0.28;
 
-our $VERSION = 'v0.3.9';
-
-=for Pod::Coverage VERSION
-
-=cut
-
-sub VERSION { # for older Perls
-    my ( $class, $wanted ) = @_;
-    require version;
-    return version->parse($VERSION);
-}
+our $VERSION = 'v0.4.0';
 
 =head1 SYNOPSIS
 
@@ -184,11 +174,6 @@ There may be an issue with regexp references. See
 L<RT#127635|https://rt.cpan.org/Ticket/Display.html?id=127635>.
 
 =head2 Bug reports and feature requests
-
-=head1 ROADMAP
-
-Support for Perl versions earlier than 5.10 will be removed sometime
-in 2019.
 
 =head1 SEE ALSO
 
