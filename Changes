@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+
+v0.3.8    2019-11-14 17:46:36+00:00 Europe/London
   [Documentation]
   - Add Types::ReadOnly to SEE ALSO.
 
