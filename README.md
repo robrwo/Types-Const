@@ -54,6 +54,8 @@ This was added in v0.3.0.
 
 [Types::ReadOnly](https://metacpan.org/pod/Types::ReadOnly)
 
+[MooX::Const](https://metacpan.org/pod/MooX::Const)
+
 # KNOWN ISSUES
 
 ## Side-effects of read-only data structures

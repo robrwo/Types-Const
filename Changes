@@ -7,6 +7,8 @@ Revision history for {{ $dist->name }}:
   [Documentation]
   - Minor rewording.
 
+  - Add MooX::Const to SEE ALSO.
+
   [Other]
   - This module is no longer experimental.
 

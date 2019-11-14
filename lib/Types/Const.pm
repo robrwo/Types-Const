@@ -185,4 +185,6 @@ L<Types::Standard>
 
 L<Types::ReadOnly>
 
+L<MooX::Const>
+
 =cut
