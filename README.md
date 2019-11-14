@@ -24,8 +24,8 @@ has bar => (
 
 # DESCRIPTION
 
-This is an _experimental_ type library that provides types that force
-read-only hash and array reference attributes to be deeply read-only.
+This is a type library that provides types to coerce read-only hash
+and array reference attributes to be deeply read-only.
 
 See the [known issues](#known-issues) below for a discussion of
 side-effects.

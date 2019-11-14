@@ -43,8 +43,8 @@ our $VERSION = 'v0.4.0';
 
 =head1 DESCRIPTION
 
-This is an I<experimental> type library that provides types that force
-read-only hash and array reference attributes to be deeply read-only.
+This is a type library that provides types to coerce read-only hash
+and array reference attributes to be deeply read-only.
 
 See the L<known issues|/"KNOWN ISSUES"> below for a discussion of
 side-effects.

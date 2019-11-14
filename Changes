@@ -4,6 +4,12 @@ Revision history for {{ $dist->name }}:
   [Incompatible Changes]
   - Perl v5.10 or newer is now required.
 
+  [Documentation]
+  - Minor rewording.
+
+  [Other]
+  - This module is no longer experimental.
+
 v0.3.8    2019-11-14 17:46:36+00:00 Europe/London
   [Documentation]
   - Add Types::ReadOnly to SEE ALSO.
