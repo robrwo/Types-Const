@@ -9,7 +9,6 @@ requires "Types::Standard" => "0";
 requires "Types::TypeTiny" => "0";
 requires "namespace::autoclean" => "0.28";
 requires "perl" => "v5.10.0";
-requires "version" => "0.77";
 recommends "Ref::Util::XS" => "0.100";
 recommends "Type::Tiny::XS" => "0";
 
