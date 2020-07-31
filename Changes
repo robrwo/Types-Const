@@ -4,7 +4,9 @@ Revision history for {{ $dist->name }}:
   [Documentation]
   - Updated copyright year.
 
-  [Other Changes]
+  [Toolchain]
+  - Add core modules in the prerequisites.
+
   - Removed unnecessary prerequisite.
 
 v0.4.0    2019-11-19 19:01:43+00:00 Europe/London
