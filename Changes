@@ -9,6 +9,8 @@ Revision history for {{ $dist->name }}:
   [Other]
   - Fix issue with MANIFEST.SKIP.
 
+  - Sign release.
+
 v0.4.1    2020-07-31 14:56:41+01:00 Europe/London
   [Documentation]
   - Updated copyright year.
