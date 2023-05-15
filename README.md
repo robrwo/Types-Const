@@ -4,7 +4,7 @@ Types::Const - Types that coerce references to read-only
 
 # VERSION
 
-version v0.4.2
+version v0.5.0
 
 # SYNOPSIS
 

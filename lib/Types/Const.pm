@@ -23,7 +23,7 @@ use Types::TypeTiny ();
 
 use namespace::autoclean 0.28;
 
-our $VERSION = 'v0.4.3';
+our $VERSION = 'v0.5.0';
 
 =head1 SYNOPSIS
 
