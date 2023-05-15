@@ -1,6 +1,13 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Incompatible Changes]
+  - Upgraded the minimum Perl version to v5.14.
+
+  [Documentation]
+  - Documented support policy for older Perls.
+
+  - Split KNOWN ISSUES section from BUGS and SOURCE.
 
 v0.4.2    2022-09-03 09:37:03+01:00 Europe/London
   [Documentation]

@@ -1,8 +1,6 @@
 package Types::Const;
 
-use v5.10;
-
-use strict;
+use v5.14;
 use warnings;
 
 # ABSTRACT: Types that coerce references to read-only
@@ -142,7 +140,7 @@ sub __coercion_generator {
 
 __PACKAGE__->meta->make_immutable;
 
-=head1 prepend:KNOWN ISSUES
+=head1 KNOWN ISSUES
 
 =head2 Side-effects of read-only data structures
 
@@ -173,7 +171,15 @@ once. (Since it is read-only, there is no need to re-check it.)
 There may be an issue with regexp references. See
 L<RT#127635|https://rt.cpan.org/Ticket/Display.html?id=127635>.
 
-=head2 Bug reports and feature requests
+=head1 SUPPORT FOR OLDER PERL VERSIONS
+
+Since v0.5.0, the this module requires Perl v5.14 or later.
+
+Future releases may only support Perl versions released in the last ten years.
+
+If you need this module on Perl v5.10, please use one of the v0.4.x
+versions of this module.  Significant bug or security fixes may be
+backported to those versions.
 
 =head1 SEE ALSO
 
