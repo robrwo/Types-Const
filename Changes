@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Documentation]
+  - Fixed typo in Changes.
 
 v0.5.0    2023-05-15 19:22:59+01:00 Europe/London
   [Incompatible Changes]
@@ -68,7 +70,7 @@ v0.3.4    2018-11-13 20:28:01+00:00 Europe/London
 
 v0.3.3    2018-11-10 22:06:06+00:00 Europe/London
   [Bug Fix]
-  - Uses version modeule for older Perls than cannot handle tuple
+  - Uses version module for older Perls than cannot handle tuple
     versions.
 
   [Documentation]
